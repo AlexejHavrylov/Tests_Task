@@ -65,11 +65,12 @@ class TestStringMethods(unittest.TestCase):
 
         assert error_string == expected_result
 
-    def test_03_welcom_page(self):
+    def test_03_check_h2_tag(self):
         driver = self.driver
         driver.switch_to.default_content()
         message = driver.find_element_by_tag_name('h2').text
-        print(message)
+
+
         expected_result = 'Sign up to our emails'
 
         assert message == expected_result
